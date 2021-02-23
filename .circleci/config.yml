@@ -1,0 +1,68 @@
+# Python CircleCI 2.1 configuration file
+version: 2.1
+orbs:
+  codecov: codecov/codecov@1.0.2
+jobs:
+  build:
+    docker:
+      - image: circleci/python:3.8-buster
+        environment:
+          ENV_PATH: .envs/.test.env
+          CODECOV_TOKEN: $CODECOV_TOKEN
+          DATABASE_URL: postgis://test_postgres_user:custom_pass@localhost/test_postgres_db?sslmode=disable
+          CELERY_BROKER_URL: redis://redis:6379/0
+      - image: circleci/postgres:12.5
+        environment:
+          POSTGRES_USER: test_postgres_user
+          POSTGRES_DB: test_postgres_db
+          POSTGRES_PASSWORD: custom_pass
+      - image: circleci/redis:5.0.9
+
+    working_directory: ~/repo
+
+    steps:
+      # Step 1: obtain repo from GitHub
+      - checkout
+      # Step 2: create virtual env and install dependencies
+      - run:
+          name: install dependencies
+          command: |
+            sudo apt update -y && sudo apt upgrade -y
+            export DEBIAN_FRONTEND=noninteractive
+            sudo ln -fs /usr/share/zoneinfo/Africa/Lusaka /etc/localtime
+            sudo dpkg-reconfigure --frontend noninteractive tzdata
+            sudo apt install -y postgresql postgresql-contrib libpq-dev
+            python -VV
+            which python
+            pip3 install virtualenv
+            virtualenv ../venv
+            source ../venv/bin/activate
+            export LC_ALL=C.UTF-8
+            export LANG=C.UTF-8
+            pip install -r requirements.txt
+            curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
+            sudo apt install nodejs -yqq
+            sudo npm install --global gulp-cli
+            curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
+            echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+            sudo apt update -q && sudo apt install yarn -yqq
+            yarn install && gulp cp
+            mkdir .envs/
+            touch .envs/.test.env
+            echo "DJANGO_SECRET_KEY='{Z+1?PKkd93k_2@_9WqVaqUY*lkfE75~j2Jk6qBGq_'" >> .envs/.test.env
+            echo "DEBUG=False" >> .envs/.test.env
+            echo "ALLOWED_HOSTS=" >> .envs/.test.env
+            echo "BASE_URL=www.example.com" >> .envs/.test.env
+            python manage.py collectstatic
+      # Step 3: run tests
+      - run:
+          name: run tests
+          command: |
+            source ../venv/bin/activate
+            pytest
+      - store_artifacts:
+          path: htmlcov
+      - store_artifacts:
+          path: coverage.xml
+      - codecov/upload:
+          file: coverage.xml

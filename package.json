@@ -1,0 +1,52 @@
+{
+  "name": "celery_project",
+  "version": "0.1.0",
+  "description": "A Simple Django Project to illustrate the use of Celery",
+  "scripts": {
+    "setup_test_db": "psql -c \"DROP DATABASE IF EXISTS test_postgres_database\" && psql -c \"DROP USER IF EXISTS test_postgres_user\" && psql -c \"CREATE USER test_postgres_user PASSWORD 'testDB-password'\" && psql -c \"CREATE DATABASE test_postgres_database OWNER test_postgres_user\" && psql -c \"GRANT ALL PRIVILEGES ON DATABASE test_postgres_database to test_postgres_user\"  && psql -c \"ALTER ROLE test_postgres_user SUPERUSER\"",
+    "test": "export ENV_PATH=.envs/.test.env && npm run setup_test_db && pytest",
+    "dev": "export ENV_PATH=.envs/.dev.env && concurrently --raw --kill-others \"./manage.py runserver_plus\" \"gulp\" \"maildev -o\"",
+    "dev:celery": "export ENV_PATH=.envs/.dev.env && concurrently --raw --kill-others \"./manage.py runserver_plus\" \"gulp\" \"maildev -o\" \"celery -A config worker -l info -E -B\"",
+    "collectstatic:dev": "export ENV_PATH=.envs/.dev.env && ./manage.py collectstatic --ignore scss/ --noinput --clear",
+    "collectstatic:prod": "export ENV_PATH=.envs/.prod.env && ./manage.py collectstatic --ignore scss/ --noinput --clear"
+  },
+  "author": "Victor Miti <victormiti@umusebo.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.13.1",
+    "@babel/preset-env": "^7.13.5",
+    "bourbon": "^7.0.0",
+    "browser-sync": "^2.26.14",
+    "commitizen": "^4.2.3",
+    "cz-conventional-changelog": "^3.3.0",
+    "del": "^6.0.0",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-conventional-changelog": "^2.0.35",
+    "gulp-npm-dist": "^1.0.3",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^4.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-stylelint": "^13.0.0",
+    "gulp-uglify": "^3.0.2",
+    "merge-stream": "^2.0.0",
+    "node-sass": "^5.0.0",
+    "sass-mq": "^5.0.1",
+    "stylelint": "^13.11.0",
+    "stylelint-config-prettier": "^8.0.2",
+    "stylelint-config-sass-guidelines": "^8.0.0",
+    "stylelint-config-standard": "^20.0.0"
+  },
+  "browserslist": [
+    "defaults",
+    "cover 99.5%",
+    "not ie < 8"
+  ],
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

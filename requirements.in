@@ -1,2 +1,42 @@
 # Core
-django>=3.1,<4.0
+django[argon2,bcrypt]>=3.1,<4.0
+celery[redis,msgpack,pytest]
+django-compressor
+django-environ
+django-extensions
+django-model-utils
+django-redis
+hiredis
+lz4 # for django_redis.compressors.lz4.Lz4Compressor
+psycopg2
+
+# Optional dependencies for Django Compressor
+beautifulsoup4
+brotli
+calmjs.parse
+csscompressor
+html5lib
+lxml
+slimit
+
+# Development
+black
+django-debug-toolbar
+flake8
+werkzeug  # needed to use ./manage.py runserver_plus
+
+# Dependencies
+pip-tools
+
+# Test
+pytest-cov
+pytest-django
+pytest-dotenv
+pytest-factoryboy
+pytest-logger
+pytest-mock
+pytest-sugar
+
+# Production
+django-anymail[sendgrid]
+sentry-sdk

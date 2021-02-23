@@ -1,0 +1,11 @@
+[report]
+skip_covered = True
+omit =
+    config/settings/*
+    config/wsgi.py
+    config/wsgi_production.py
+    config/urls.py
+    celery_project/*/migrations/*
+    manage.py
+
+show_missing = True

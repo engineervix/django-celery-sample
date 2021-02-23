@@ -1,0 +1,30 @@
+[tool.black]
+line-length = 88
+target-version = ['py36', 'py37', 'py38']
+include = '\.pyi?$'
+exclude = '''
+
+(
+  /(
+      \.eggs         # exclude a few common directories in the
+    | \.git          # root of the project
+    | \.hg
+    | \.mypy_cache
+    | \.tox
+    | \.venv
+    | _build
+    | buck-out
+    | build
+    | (.*)/migrations
+    | dist
+  )/
+)
+'''
+[tool.commitizen]
+version = "0.1.0"
+tag_format = "v$major.$minor.$patch"
+version_files = [
+    "package.json",
+    "celery_project/__init__.py",
+]
+changelog_file = "CHANGELOG.md"
