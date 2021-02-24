@@ -54,7 +54,7 @@ jobs:
             echo "DEBUG=False" >> .envs/.test.env
             echo "ALLOWED_HOSTS=" >> .envs/.test.env
             echo "BASE_URL=www.example.com" >> .envs/.test.env
-            python manage.py collectstatic
+            # python manage.py collectstatic
       # Step 3: run tests
       - run:
           name: run tests
