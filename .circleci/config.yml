@@ -46,17 +46,16 @@ jobs:
             curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | sudo apt-key add -
             echo "deb https://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
             sudo apt update -q && sudo apt install yarn -yqq
-            # yarn install && gulp cp
-            yarn install
+            yarn install && gulp cp
             mkdir .envs/
             touch .envs/.test.env
             echo "DJANGO_SECRET_KEY='{Z+1?PKkd93k_2@_9WqVaqUY*lkfE75~j2Jk6qBGq_'" >> .envs/.test.env
             echo "DEBUG=False" >> .envs/.test.env
             echo "ALLOWED_HOSTS=" >> .envs/.test.env
             echo "BASE_URL=www.example.com" >> .envs/.test.env
-            # python manage.py collectstatic
             python manage.py makemigrations
             python manage.py migrate
+            # python manage.py collectstatic
       # Step 3: run tests
       - run:
           name: run tests
