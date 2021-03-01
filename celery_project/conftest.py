@@ -3,7 +3,7 @@ import factory
 from django.conf import settings
 from faker import Faker
 
-from celery_project.tests.factories import UserFactory
+from celery_project.tests.factories import UserFactory, QuoteFactory
 
 fake = Faker()
 
@@ -25,3 +25,4 @@ def django_db_setup(django_db_setup, django_db_blocker, tmpdir_factory):
             is_staff=True,
             is_superuser=True,
         )
+        QuoteFactory.create_batch(size=2)

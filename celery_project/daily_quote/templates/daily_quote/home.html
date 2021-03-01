@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block extrameta %}
+    <meta name="keywords" content="Some, Key, Words">
+    <meta name="description" content="Description of the Project">
+    <meta name="author" content="Jane Doe">
+
+    <meta property="og:title" content="Quote of the Day" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="Description of the Project">
+    <meta property="og:site_name" content="Site Name comes here">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}" />
+    <meta property="og:image" content="https://picsum.photos/id/174/300/200" />
+    <meta property="og:locale" content="en_ZM" />
+    <meta property="og:locale:alternate" content="en_ZA" />
+    <meta property="og:locale:alternate" content="en_GB" />
+    <meta property="og:locale:alternate" content="en_US" />
+{% endblock %}
+
+{% block page_title %}
+Daily Quote for {% now "D jS M Y" %}
+{% endblock %}
+
+{% block content %}
+<!-- Full Page Image Header with Vertically Centered Content -->
+<header class="masthead">
+  <div class="container h-100">
+    <div class="row h-100 align-items-center">
+      <div class="col-12 text-center">
+        <h2 class="font-weight-light">Today is {% now "l jS F Y" %}</h2>
+        
+        <blockquote class="blockquote">
+            <p class="lead mb-0">{{ daily_quote.quote }}</p>
+            <footer class="blockquote-footer">{{ daily_quote.author_name }}</footer>
+        </blockquote>
+
+      </div>
+    </div>
+  </div>
+</header>
+{% endblock %}

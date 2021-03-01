@@ -21,6 +21,8 @@
 - [Prerequisites](#prerequisites)
 - [Project Setup](#project-setup)
 - [Run the project](#run-the-project)
+  - [without celery](#without-celery)
+  - [with celery](#with-celery)
 - [Tests](#tests)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
@@ -57,10 +59,10 @@ pip install pip-tools && pip-sync
 # or you could just `pip install -r requirements.txt`
 ```
 
-Install the Node.js dependencies:
+Install the Node.js dependencies and copy the vendor libraries to the `static` directory:
 
 ```sh
-yarn install
+yarn install && gulp cp
 ```
 
 Create a postgres database and user for the project. If you are using tools such as [PGAdmin](https://www.pgadmin.org/) or [Postgres.app](https://postgresapp.com/), you please feel free to use them according to their documentation. If you are using the CLI like me, you could do it as follows:
@@ -121,17 +123,27 @@ We are now ready to run!
 
 ## Run the project
 
+### without celery
+
 ```sh
 yarn dev
 ```
 
-If all goes well, this will launch two tabs in your default browser – a `maildev` tab and a `django` tab with the default :rocket: homepage and the message "The install worked successfully! Congratulations!"
+### with celery
+
+```sh
+yarn dev:celery
+```
+
+If all goes well, this will launch two tabs in your default browser – a `maildev` tab and a `django` tab with today's date and a quote for today, as shown in the screenshot below:
+
+![screenshot](https://i.imgur.com/Oey9js2.png)
 
 The [Browsersync](https://browsersync.io/) and [gulp](https://gulpjs.com/) setup provides for automatic restarting of the dev server and autoreload of the browser, so you can work on the project and make changes to the files without having to do this manually.
 
 ## Tests
 
-This project uses pytest and the initial tests should give you about 90% test coverage.
+This project uses pytest and the initial tests should give you about 93% test coverage.
 
 ```sh
 yarn test

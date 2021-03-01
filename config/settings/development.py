@@ -1,5 +1,19 @@
 from .base import *
 
+# Django Debug Toolbar
+INSTALLED_APPS.append(  # noqa: F405
+    "debug_toolbar"
+)  # https://github.com/jazzband/django-debug-toolbar
+
+# Additional middleware introduced by debug toolbar
+# insert after first element value.
+
+# The order of MIDDLEWARE and MIDDLEWARE_CLASSES is important.
+# You should include the Debug Toolbar middleware as early as possible in the list.
+# However, it must come after any other middleware that encodes the response's content,
+# such as GZipMiddleware.
+MIDDLEWARE.insert(1, "debug_toolbar.middleware.DebugToolbarMiddleware")  # noqa: F405
+
 # SECURITY WARNING: don't run with debug turned on in production!
 # DEBUG = True
 # ALLOWED_HOSTS = []

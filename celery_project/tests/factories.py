@@ -1,6 +1,8 @@
 from celery_project.users.models import User
 import factory
 
+from celery_project.daily_quote.models import Quote
+
 
 class UserFactory(factory.django.DjangoModelFactory):
     """Factory for creating Django User objects"""
@@ -15,3 +17,13 @@ class UserFactory(factory.django.DjangoModelFactory):
 
     class Meta:
         model = User
+
+
+class QuoteFactory(factory.django.DjangoModelFactory):
+    """Factory for creating Quote objects"""
+
+    quote = factory.Faker("text")
+    author_name = factory.Faker("name")
+
+    class Meta:
+        model = Quote

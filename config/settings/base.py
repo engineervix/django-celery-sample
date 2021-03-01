@@ -44,6 +44,7 @@ ALLOWED_HOSTS = env("ALLOWED_HOSTS")
 
 INSTALLED_APPS = [
     "celery_project.users",
+    "celery_project.daily_quote",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",

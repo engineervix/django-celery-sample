@@ -1,0 +1,77 @@
+{% load static %}
+{% load compress %}
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {% block extrameta %}
+
+    {% endblock %}
+
+    <title>
+        {% block title %}
+        {% block title_prefix %}
+        My Project &raquo;
+        {% endblock %}
+        {% block page_title %}
+        {% endblock %}
+        {% block title_suffix %}
+        {% endblock %}
+        {% endblock %}
+    </title>
+
+    {% compress css %}
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'vendors/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet">
+
+    {% block extra_css %}
+    {# Override this in templates to add extra stylesheets #}
+    {% endblock %}
+
+    <!-- Custom Styles -->
+    <link href="{% static 'css/main.min.css' %}" rel="stylesheet" type="text/css">
+
+    {% endcompress %}
+
+    {% load humanize %}
+</head>
+
+<body>
+    <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+    {% block content %}
+
+    {% endblock %}
+
+    <!--Scripts-->
+
+    {% compress js %}
+
+    <!-- jQuery -->
+    <script type="text/javascript" src="{% static 'vendors/jquery/jquery.min.js' %}"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script type="text/javascript" src="{% static 'vendors/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    {% block extra_js %}
+
+    {% endblock %}
+
+    <!-- Custom JavaScript -->
+    <script type="text/javascript" src="{% static 'js/main.min.js' %}"></script>
+    {% endcompress %}
+
+</body>
+
+</html>

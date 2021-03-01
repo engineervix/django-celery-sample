@@ -11,7 +11,12 @@
     "collectstatic:prod": "export ENV_PATH=.envs/.prod.env && ./manage.py collectstatic --ignore scss/ --noinput --clear"
   },
   "author": "Victor Miti <victormiti@umusebo.com>",
-  "license": "MIT",
+  "license": "BSD-3-Clause",
+  "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.2",
+    "bootstrap": "^4.6.0",
+    "jquery": "^3.5.1"
+  },
   "devDependencies": {
     "@babel/core": "^7.13.1",
     "@babel/preset-env": "^7.13.5",
@@ -33,6 +38,7 @@
     "gulp-uglify": "^3.0.2",
     "merge-stream": "^2.0.0",
     "node-sass": "^5.0.0",
+    "popper.js": "^1.16.1",
     "sass-mq": "^5.0.1",
     "stylelint": "^13.11.0",
     "stylelint-config-prettier": "^8.0.2",
