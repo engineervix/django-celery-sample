@@ -1,6 +1,6 @@
 # A simple Django project to illustrate the use of Celery
 
-> this is the starting point
+> I created this project to accompany my blog post at <https://importthis.tech/djangocelery-from-development-to-production>
 
 [![forthebadge](https://forthebadge.com/images/badges/made-with-python.svg)](https://forthebadge.com)
 
@@ -157,4 +157,4 @@ Going into production shouldn't be too complicated, as the project includes prod
 - I have already mentioned the [`.prod.env`](.envs.sample/.prod.env.sample) file,
 - There's the [`config/settings/production.py`](config/settings/production.py) file,
 - I created a separate [`wsgi_production.py`](config/wsgi_production.py) file and
-- There are some celery and celery beat configuration files in the [`.envs.example/celery`](.envs.sample/celery/) directory. These will come in handy if you're using [systemd](https://systemd.io/).
+- There are some celery and celery beat configuration files in the [`.envs.example/celery`](.envs.sample/celery/) directory. These will come in handy if you're using [systemd](https://systemd.io/). I wrote a [blog post](https://importthis.tech/djangocelery-from-development-to-production) that describes how to daemonize celery and celery beat using systemd.
