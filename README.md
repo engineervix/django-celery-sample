@@ -24,6 +24,7 @@
   - [without celery](#without-celery)
   - [with celery](#with-celery)
 - [Tests](#tests)
+- [Production-ready](#production-ready)
 
 <!-- END doctoc generated TOC please keep comment here to allow auto update -->
 
@@ -148,3 +149,12 @@ This project uses pytest and the initial tests should give you about 93% test co
 ```sh
 yarn test
 ```
+
+## Production-ready
+
+Going into production shouldn't be too complicated, as the project includes production-ready configurations right from the start:
+
+- I have already mentioned the [`.prod.env`](.envs.sample/.prod.env.sample) file,
+- There's the [`config/settings/production.py`](config/settings/production.py) file,
+- I created a separate [`wsgi_production.py`](config/wsgi_production.py) file and
+- There are some celery and celery beat configuration files in the [`.envs.example/celery`](.envs.sample/celery/) directory. These will come in handy if you're using [systemd](https://systemd.io/).
