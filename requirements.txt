@@ -62,7 +62,7 @@ django-anymail[sendgrid]==8.2
     # via -r requirements.in
 django-appconf==1.0.4
     # via django-compressor
-django-compressor==2.4
+django-compressor==2.4.1
     # via -r requirements.in
 django-debug-toolbar==3.2.1
     # via -r requirements.in
