@@ -152,7 +152,7 @@ pytest-factoryboy==2.1.0
     # via -r requirements.in
 pytest-logger==0.5.1
     # via -r requirements.in
-pytest-mock==3.5.1
+pytest-mock==3.6.0
     # via -r requirements.in
 pytest-sugar==0.9.4
     # via -r requirements.in
