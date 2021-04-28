@@ -20,7 +20,7 @@ beautifulsoup4==4.9.3
     # via -r requirements.in
 billiard==3.6.3.0
     # via celery
-black==20.8b1
+black==21.4b1
     # via -r requirements.in
 brotli==1.0.9
     # via -r requirements.in
@@ -211,10 +211,6 @@ toml==0.10.2
     # via
     #   black
     #   pytest
-typed-ast==1.4.2
-    # via black
-typing-extensions==3.7.4.3
-    # via black
 urllib3==1.26.3
     # via
     #   requests
