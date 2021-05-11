@@ -91,7 +91,7 @@ flake8==3.8.4
     # via -r requirements.in
 future==0.18.2
     # via pytest-logger
-hiredis==1.1.0
+hiredis==2.0.0
     # via -r requirements.in
 html5lib==1.1
     # via -r requirements.in
