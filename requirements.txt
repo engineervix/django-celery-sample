@@ -227,7 +227,7 @@ wcwidth==0.2.5
     # via prompt-toolkit
 webencodings==0.5.1
     # via html5lib
-werkzeug==1.0.1
+werkzeug==2.0.0
     # via -r requirements.in
 
 # The following packages are considered to be unsafe in a requirements file:
