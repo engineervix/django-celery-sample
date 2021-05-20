@@ -58,7 +58,7 @@ coverage==5.4
     # via pytest-cov
 csscompressor==0.9.5
     # via -r requirements.in
-django-anymail[sendgrid]==8.2
+django-anymail[sendgrid]==8.3
     # via -r requirements.in
 django-appconf==1.0.4
     # via django-compressor
