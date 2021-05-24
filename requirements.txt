@@ -4,7 +4,7 @@
 #
 #    pip-compile requirements.in
 #
-amqp==5.0.5
+amqp==5.0.6
     # via kombu
 appdirs==1.4.4
     # via black
@@ -18,7 +18,7 @@ bcrypt==3.2.0
     # via django
 beautifulsoup4==4.9.3
     # via -r requirements.in
-billiard==3.6.3.0
+billiard==3.6.4.0
     # via celery
 black==21.5b1
     # via -r requirements.in
@@ -26,7 +26,7 @@ brotli==1.0.9
     # via -r requirements.in
 calmjs.parse==1.2.5
     # via -r requirements.in
-celery[msgpack,pytest,redis]==5.0.5
+celery[msgpack,pytest,redis]==5.1.0
     # via
     #   -r requirements.in
     #   pytest-celery
@@ -101,7 +101,7 @@ inflection==0.5.1
     # via pytest-factoryboy
 iniconfig==1.1.1
     # via pytest
-kombu==5.0.2
+kombu==5.1.0
     # via celery
 lxml==4.6.3
     # via -r requirements.in
@@ -223,6 +223,7 @@ vine==5.0.0
     # via
     #   amqp
     #   celery
+    #   kombu
 wcwidth==0.2.5
     # via prompt-toolkit
 webencodings==0.5.1
