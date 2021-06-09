@@ -145,7 +145,7 @@ pyparsing==2.4.7
     # via packaging
 pytest-celery==0.0.0a1
     # via celery
-pytest-cov==2.11.1
+pytest-cov==2.12.1
     # via -r requirements.in
 pytest-django==4.2.0
     # via -r requirements.in
@@ -215,6 +215,7 @@ toml==0.10.2
     #   black
     #   pep517
     #   pytest
+    #   pytest-cov
 urllib3==1.26.3
     # via
     #   requests
