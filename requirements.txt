@@ -20,7 +20,7 @@ beautifulsoup4==4.9.3
     # via -r requirements.in
 billiard==3.6.4.0
     # via celery
-black==21.5b1
+black==21.6b0
     # via -r requirements.in
 brotli==1.0.9
     # via -r requirements.in
@@ -58,7 +58,7 @@ coverage==5.4
     # via pytest-cov
 csscompressor==0.9.5
     # via -r requirements.in
-django-anymail[sendgrid]==8.3
+django-anymail[sendgrid]==8.4
     # via -r requirements.in
 django-appconf==1.0.4
     # via django-compressor
@@ -74,7 +74,7 @@ django-model-utils==4.1.1
     # via -r requirements.in
 django-redis==4.12.1
     # via -r requirements.in
-django[argon2,bcrypt]==3.1.10
+django[argon2,bcrypt]==3.2.4
     # via
     #   -r requirements.in
     #   django-anymail
@@ -145,9 +145,9 @@ pyparsing==2.4.7
     # via packaging
 pytest-celery==0.0.0a1
     # via celery
-pytest-cov==2.11.1
+pytest-cov==2.12.1
     # via -r requirements.in
-pytest-django==4.2.0
+pytest-django==4.4.0
     # via -r requirements.in
 pytest-dotenv==0.5.2
     # via -r requirements.in
