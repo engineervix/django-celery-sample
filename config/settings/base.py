@@ -12,6 +12,9 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 import os
 
+# https://docs.djangoproject.com/en/3.2/ref/applications/#django.apps.AppConfig.default
+from django.apps import AppConfig
+
 import environ
 
 from celery.schedules import crontab
@@ -126,6 +129,8 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+# https://docs.djangoproject.com/en/3.2/ref/applications/#django.apps.AppConfig.default
+AppConfig.default = False
 
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
@@ -186,6 +191,8 @@ COMPRESS_STORAGE = "compressor.storage.GzipCompressorFileStorage"
 MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 AUTH_USER_MODEL = "users.User"
+
+DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
 
 # Celery
 # ------------------------------------------------------------------------------
