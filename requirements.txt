@@ -131,7 +131,7 @@ ply==3.11
     #   slimit
 prompt-toolkit==3.0.16
     # via click-repl
-psycopg2==2.8.6
+psycopg2==2.9
     # via -r requirements.in
 py==1.10.0
     # via pytest
