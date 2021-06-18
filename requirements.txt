@@ -26,7 +26,7 @@ brotli==1.0.9
     # via -r requirements.in
 calmjs.parse==1.2.5
     # via -r requirements.in
-celery[msgpack,pytest,redis]==5.1.0
+celery[msgpack,pytest,redis]==5.1.1
     # via
     #   -r requirements.in
     #   pytest-celery
