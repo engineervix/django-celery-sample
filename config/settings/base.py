@@ -12,9 +12,6 @@ https://docs.djangoproject.com/en/3.1/ref/settings/
 
 import os
 
-# https://docs.djangoproject.com/en/3.2/ref/applications/#django.apps.AppConfig.default
-from django.apps import AppConfig
-
 import environ
 
 from celery.schedules import crontab
@@ -46,8 +43,8 @@ ALLOWED_HOSTS = env("ALLOWED_HOSTS")
 # Application definition
 
 INSTALLED_APPS = [
-    "celery_project.users",
-    "celery_project.daily_quote",
+    "celery_project.users.apps.UsersConfig",
+    "celery_project.daily_quote.apps.DailyQuoteConfig",
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
@@ -129,9 +126,6 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
-# https://docs.djangoproject.com/en/3.2/ref/applications/#django.apps.AppConfig.default
-AppConfig.default = False
-
 # Internationalization
 # https://docs.djangoproject.com/en/3.1/topics/i18n/
 
@@ -192,7 +186,7 @@ MESSAGE_STORAGE = "django.contrib.messages.storage.session.SessionStorage"
 
 AUTH_USER_MODEL = "users.User"
 
-DEFAULT_AUTO_FIELD = "django.db.models.AutoField"
+DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 # Celery
 # ------------------------------------------------------------------------------
