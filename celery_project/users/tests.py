@@ -49,5 +49,5 @@ class UsersManagersTests(TestCase):
 
 @pytest.mark.django_db
 def test_users_app():
-    assert UsersConfig.name == "users"
+    assert UsersConfig.name == "celery_project.users"
     assert apps.get_app_config("users").name == "celery_project.users"

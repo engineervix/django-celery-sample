@@ -30,6 +30,6 @@ def test_homepage(client):
 
 
 @pytest.mark.django_db
-def test_users_app():
-    assert DailyQuoteConfig.name == "daily_quote"
+def test_daily_quote_app():
+    assert DailyQuoteConfig.name == "celery_project.daily_quote"
     assert apps.get_app_config("daily_quote").name == "celery_project.daily_quote"
