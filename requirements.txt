@@ -143,7 +143,7 @@ pyflakes==2.3.1
     # via flake8
 pyparsing==2.4.7
     # via packaging
-pytest-celery==0.0.0a1
+pytest-celery==0.0.0
     # via celery
 pytest-cov==2.12.1
     # via -r requirements.in
