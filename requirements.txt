@@ -159,7 +159,7 @@ pytest-mock==3.6.1
     # via -r requirements.in
 pytest-sugar==0.9.4
     # via -r requirements.in
-pytest==6.2.2
+pytest==6.2.4
     # via
     #   pytest-cov
     #   pytest-django
