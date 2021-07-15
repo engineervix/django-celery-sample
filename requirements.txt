@@ -168,7 +168,7 @@ pytest==6.2.4
     #   pytest-logger
     #   pytest-mock
     #   pytest-sugar
-python-dateutil==2.8.1
+python-dateutil==2.8.2
     # via faker
 python-dotenv==0.15.0
     # via pytest-dotenv
