@@ -216,7 +216,7 @@ toml==0.10.2
     #   pep517
     #   pytest
     #   pytest-cov
-urllib3==1.26.3
+urllib3==1.26.6
     # via
     #   requests
     #   sentry-sdk
