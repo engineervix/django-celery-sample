@@ -200,7 +200,7 @@ six==1.15.0
     #   python-dateutil
 slimit==0.8.1
     # via -r requirements.in
-soupsieve==2.2
+soupsieve==2.2.1
     # via beautifulsoup4
 sqlparse==0.4.1
     # via
