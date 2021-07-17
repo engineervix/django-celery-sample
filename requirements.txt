@@ -54,7 +54,7 @@ click==7.1.2
     #   click-plugins
     #   click-repl
     #   pip-tools
-coverage==5.4
+coverage==5.5
     # via pytest-cov
 csscompressor==0.9.5
     # via -r requirements.in
