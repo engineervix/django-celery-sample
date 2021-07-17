@@ -10,7 +10,7 @@ appdirs==1.4.4
     # via black
 argon2-cffi==20.1.0
     # via django
-asgiref==3.3.4
+asgiref==3.4.1
     # via django
 attrs==20.3.0
     # via pytest
