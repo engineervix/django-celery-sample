@@ -119,7 +119,7 @@ packaging==20.9
     #   pytest-sugar
 pathspec==0.9.0
     # via black
-pep517==0.10.0
+pep517==0.11.0
     # via pip-tools
 pip-tools==6.2.0
     # via -r requirements.in
