@@ -16,7 +16,7 @@ jobs:
           POSTGRES_USER: test_postgres_user
           POSTGRES_DB: test_postgres_db
           POSTGRES_PASSWORD: custom_pass
-      - image: circleci/redis:5.0.13
+      - image: circleci/redis:6.2.5
 
     working_directory: ~/repo
 
