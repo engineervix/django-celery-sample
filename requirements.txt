@@ -182,7 +182,7 @@ redis==3.5.3
     # via
     #   celery
     #   django-redis
-regex==2021.8.3
+regex==2021.8.21
     # via black
 requests==2.26.0
     # via django-anymail
