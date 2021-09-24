@@ -60,7 +60,7 @@ csscompressor==0.9.5
     # via -r requirements.in
 django-anymail[sendgrid]==8.4
     # via -r requirements.in
-django-appconf==1.0.4
+django-appconf==1.0.5
     # via django-compressor
 django-compressor==2.4.1
     # via -r requirements.in
