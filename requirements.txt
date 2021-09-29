@@ -40,7 +40,7 @@ cffi==1.14.6
     #   bcrypt
 chardet==4.0.0
     # via requests
-click-didyoumean==0.0.3
+click-didyoumean==0.3.0
     # via celery
 click-plugins==1.1.1
     # via celery
