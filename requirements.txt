@@ -145,7 +145,7 @@ pyparsing==2.4.7
     # via packaging
 pytest-celery==0.0.0
     # via celery
-pytest-cov==2.12.1
+pytest-cov==3.0.0
     # via -r requirements.in
 pytest-django==4.4.0
     # via -r requirements.in
