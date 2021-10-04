@@ -85,7 +85,7 @@ django[argon2,bcrypt]==3.2.7
     #   django-redis
 factory-boy==3.2.0
     # via pytest-factoryboy
-faker==8.14.1
+faker==8.16.0
     # via factory-boy
 flake8==3.9.2
     # via -r requirements.in
