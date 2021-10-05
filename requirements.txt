@@ -74,7 +74,7 @@ django-model-utils==4.1.1
     # via -r requirements.in
 django-redis==5.0.0
     # via -r requirements.in
-django[argon2,bcrypt]==3.2.7
+django[argon2,bcrypt]==3.2.8
     # via
     #   -r requirements.in
     #   django-anymail
