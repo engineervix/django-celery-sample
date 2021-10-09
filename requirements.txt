@@ -30,7 +30,7 @@ celery[msgpack,pytest,redis]==5.1.2
     # via
     #   -r requirements.in
     #   pytest-celery
-certifi==2021.5.30
+certifi==2021.10.8
     # via
     #   requests
     #   sentry-sdk
