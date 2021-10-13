@@ -87,7 +87,7 @@ factory-boy==3.2.0
     # via pytest-factoryboy
 faker==8.16.0
     # via factory-boy
-flake8==3.9.2
+flake8==4.0.1
     # via -r requirements.in
 future==0.18.2
     # via pytest-logger
