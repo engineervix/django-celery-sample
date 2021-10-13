@@ -95,7 +95,7 @@ hiredis==2.0.0
     # via -r requirements.in
 html5lib==1.1
     # via -r requirements.in
-idna==3.2
+idna==3.3
     # via requests
 inflection==0.5.1
     # via pytest-factoryboy
