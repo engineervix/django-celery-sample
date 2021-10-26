@@ -83,7 +83,7 @@ django[argon2,bcrypt]==3.2.8
     #   django-extensions
     #   django-model-utils
     #   django-redis
-factory-boy==3.2.0
+factory-boy==3.2.1
     # via pytest-factoryboy
 faker==8.16.0
     # via factory-boy
