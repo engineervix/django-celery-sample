@@ -113,7 +113,7 @@ msgpack==1.0.2
     # via celery
 mypy-extensions==0.4.3
     # via black
-packaging==21.0
+packaging==21.2
     # via
     #   pytest
     #   pytest-sugar
