@@ -18,8 +18,8 @@
     "jquery": "3.6.0"
   },
   "devDependencies": {
-    "@babel/core": "7.15.8",
-    "@babel/preset-env": "7.15.8",
+    "@babel/core": "7.16.0",
+    "@babel/preset-env": "7.16.0",
     "bourbon": "7.0.0",
     "browser-sync": "2.27.7",
     "commitizen": "4.2.4",
