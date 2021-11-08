@@ -101,7 +101,7 @@ inflection==0.5.1
     # via pytest-factoryboy
 iniconfig==1.1.1
     # via pytest
-kombu==5.2.0
+kombu==5.2.1
     # via celery
 lxml==4.6.4
     # via -r requirements.in
