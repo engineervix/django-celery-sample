@@ -11,7 +11,7 @@ jobs:
           CODECOV_TOKEN: $CODECOV_TOKEN
           DATABASE_URL: postgres://test_postgres_user:custom_pass@localhost/test_postgres_db?sslmode=disable
           CELERY_BROKER_URL: redis://redis:6379/0
-      - image: circleci/postgres:12.7
+      - image: circleci/postgres:12.9
         environment:
           POSTGRES_USER: test_postgres_user
           POSTGRES_DB: test_postgres_db
