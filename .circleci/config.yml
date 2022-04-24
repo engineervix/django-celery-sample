@@ -5,7 +5,7 @@ orbs:
 jobs:
   build:
     docker:
-      - image: circleci/python:3.9-buster
+      - image: circleci/python:3.10-buster
         environment:
           ENV_PATH: .envs/.test.env
           CODECOV_TOKEN: $CODECOV_TOKEN
