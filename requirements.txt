@@ -186,7 +186,7 @@ regex==2021.11.10
     # via black
 requests==2.26.0
     # via django-anymail
-rjsmin==1.1.0
+rjsmin==1.2.3
     # via django-compressor
 sentry-sdk==1.5.0
     # via -r requirements.in
